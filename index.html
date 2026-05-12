@@ -4,473 +4,501 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Glass Stack</title>
+    <title>Mateus Alves — Creative Designer & Video Strategist</title>
+    <meta name="description" content="Portfólio de Mateus Alves: editor de vídeo, designer e estrategista de conteúdo viral para marcas militares e podcasts.">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <div class="gradient-background">
-        <div class="gradient-sphere sphere-1"></div>
-        <div class="gradient-sphere sphere-2"></div>
-        <div class="gradient-sphere sphere-3"></div>
-    </div>
-    <div class="grid-overlay"></div>
-    <div class="glow"></div>
-    <div id="particles-container" class="particles-container"></div>
-    <div class="noise-overlay"></div>
+    <!-- ============= ATMOSPHERE LAYERS ============= -->
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-scanlines" aria-hidden="true"></div>
+    <div class="bg-noise" aria-hidden="true"></div>
+    <div class="bg-vignette" aria-hidden="true"></div>
+    <div class="bg-glow glow-purple" aria-hidden="true"></div>
+    <div class="bg-glow glow-cyan" aria-hidden="true"></div>
 
-    <main class="main-container">
-        <section class="glass-card header-section">
-            <div class="profile-info">
-                <div class="profile-img-container">
-                    <img src="img/foto-perfil.png" alt="Perfil" class="profile-img">
+    <!-- ============= CUSTOM CURSOR ============= -->
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+
+    <!-- ============= SIDE NAVIGATION ============= -->
+    <nav class="side-nav" aria-label="Navegação principal">
+        <a href="#hero" class="nav-dot active" data-label="Início"><span></span></a>
+        <a href="#work" class="nav-dot" data-label="Projetos"><span></span></a>
+        <a href="#thumbs" class="nav-dot" data-label="Thumbnails"><span></span></a>
+        <a href="#clients" class="nav-dot" data-label="Clientes"><span></span></a>
+        <a href="#skills" class="nav-dot" data-label="Skills"><span></span></a>
+        <a href="#niches" class="nav-dot" data-label="Nichos"><span></span></a>
+        <a href="#mind" class="nav-dot" data-label="Mindset"><span></span></a>
+        <a href="#contact" class="nav-dot" data-label="Contato"><span></span></a>
+    </nav>
+
+    <!-- ============= TOP BAR ============= -->
+    <header class="topbar">
+        <a href="#hero" class="brand">
+            <span class="brand-mark">M/A</span>
+            <span class="brand-status">
+                <i class="status-pulse"></i>
+                <span>DISPONÍVEL P/ PROJETOS</span>
+            </span>
+        </a>
+        <div class="topbar-meta">
+            <span class="meta-line"><i class="far fa-clock"></i> <span id="clock">--:--:--</span> BRT</span>
+            <span class="meta-line meta-loc"><i class="fas fa-map-marker-alt"></i> RIO DE JANEIRO / BR</span>
+        </div>
+    </header>
+
+    <!-- ============= HERO ============= -->
+    <section id="hero" class="hero">
+        <canvas id="hero3d" class="hero-canvas" aria-hidden="true"></canvas>
+
+        <div class="hero-grid">
+            <div class="hero-left reveal">
+                <div class="hero-tag">
+                    <span class="tag-dot"></span>
+                    <span>PORTFOLIO_2026 / v3.0</span>
                 </div>
-                <div class="text-info">
-                    <h1>Mateus <span class="gradient-text">Alves</span></h1>
-                    <p class="role">Creative Designer & Video Strategist specialized in Viral Content</p>
-                    <div class="header-socials horizontal-socials">
-                        <a href="https://api.whatsapp.com/send?phone=5521973042881&text=Ol%C3%A1%2C+Mateus%21"
-                            class="social-btn whatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://www.instagram.com/mateusalvesdzn" class="social-btn insta" title="Instagram"><i
-                                class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-btn linkedin" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="mailto:mateusalves.flu@gmail.com" class="social-btn email" title="Email"><i
-                                class="fas fa-envelope"></i></a>
+                <h1 class="hero-title">
+                    <span class="line"><span class="word" data-text="MATEUS">MATEUS</span></span>
+                    <span class="line outline"><span class="word" data-text="ALVES">ALVES</span></span>
+                </h1>
+                <p class="hero-sub">
+                    Creative Designer &amp; Video Strategist<br>
+                    <span class="hero-sub-accent">especializado em conteúdo viral.</span>
+                </p>
+
+                <div class="hero-cta">
+                    <a href="#work" class="btn-primary">
+                        <span>Ver projetos</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn-ghost">
+                        <span>Falar comigo</span>
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-num" data-count="1500000">0</span>
+                        <span class="stat-label">Views gerados</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num" data-count="335">0</span>
+                        <span class="stat-label">Mil seguidores</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num" data-count="6">0</span>
+                        <span class="stat-label">Anos de edição</span>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <h2 class="section-title">Projetos em Destaque</h2>
-        <section class="stack-container horizontal-stack">
-            <div class="stack-card glass-card">
-                <video src="videos/OPERAÇÕES COM CÃES - TODOS OS TEMEM OS CÃES DE GUERRA!-00.00.00.000-00.01.23.215.mp4"
-                    loop muted playsinline preload="metadata"></video>
-                <div class="card-content">
-                    <h3>Curso de Operações com Cães</h3>
-                    <p>Edição dinâmica focada em retenção e branding.</p>
-                </div>
-                <div class="click-hint">
-                    <i class="fas fa-hand-pointer"></i>
-                </div>
-            </div>
-            <div class="stack-card glass-card">
-                <video src="videos/brasileironaucrania.mp4" loop muted playsinline preload="metadata"></video>
-                <div class="card-content">
-                    <h3>Brasileiros na Guerra da Ucrânia</h3>
-                    <p>Color grading e narrativa cinematográfica.</p>
-                </div>
-                <div class="click-hint">
-                    <i class="fas fa-hand-pointer"></i>
+            <div class="hero-right reveal">
+                <div class="profile-card">
+                    <div class="profile-img-frame">
+                        <span class="frame-corner tl"></span>
+                        <span class="frame-corner tr"></span>
+                        <span class="frame-corner bl"></span>
+                        <span class="frame-corner br"></span>
+                        <img src="img/foto-perfil.png" alt="Mateus Alves" class="profile-img">
+                        <div class="profile-readout">
+                            <span class="readout-line">REC ● 00:00:42</span>
+                            <span class="readout-line">ISO 400 / 24FPS</span>
+                        </div>
+                    </div>
+                    <div class="profile-socials">
+                        <a href="https://api.whatsapp.com/send?phone=5521973042881&text=Ol%C3%A1%2C+Mateus%21" class="sc-btn" data-tip="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/mateusalvesdzn" class="sc-btn" data-tip="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="sc-btn" data-tip="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:mateusalves.flu@gmail.com" class="sc-btn" data-tip="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
                 </div>
             </div>
-            <div class="stack-card glass-card">
-                <video
-                    src="videos/COMANDOS ANFÍBIOS OU OPERAÇÕES ESPECIAIS_ QUAL é a DIFERENÇA ENTRE OS DOIS CURSOS_-00.00.00.000-00.01.13.698.mp4"
-                    loop muted playsinline preload="metadata"></video>
-                <div class="card-content">
-                    <h3>Taf Comandos Anfíbios</h3>
-                    <p>Cortes rápidos e efeitos visuais modernos.</p>
-                </div>
-                <div class="click-hint">
-                    <i class="fas fa-hand-pointer"></i>
-                </div>
-            </div>
-            <div class="stack-card glass-card">
-                <video
-                    src="videos/O LADO SOMBRIO DA LEGIÃO ESTRANGEIRA _ PASSO A PASSO PARA SE TORNAR UM LEGIONÁRIO!-00.00.00.000-00.01.09.160.mp4"
-                    loop muted playsinline preload="metadata"></video>
-                <div class="card-content">
-                    <h3>Legião Estrangeira</h3>
-                    <p>Cortes rápidos e efeitos visuais modernos.</p>
-                </div>
-                <div class="click-hint">
-                    <i class="fas fa-hand-pointer"></i>
-                </div>
-            </div>
-            <div class="stack-card glass-card">
-                <video src="videos/CONHEÇA O BEPI - OS CAÇADORES DA CAATINGA!-00.00.00.000-00.01.26.278.mp4" loop muted
-                    playsinline preload="metadata"></video>
-                <div class="card-content">
-                    <h3>Legião Estrangeira</h3>
-                    <p>Cortes rápidos e efeitos visuais modernos.</p>
-                </div>
-                <div class="click-hint">
-                    <i class="fas fa-hand-pointer"></i>
-                </div>
-            </div>
-            <div class="stack-card glass-card">
-                <video src="videos/INSANO_ TAF dos PARACOMANDOS-00.00.00.000-00.01.13.423.mp4" loop muted playsinline
-                    preload="metadata"></video>
-                <div class="card-content">
-                    <h3>Legião Estrangeira</h3>
-                    <p>Cortes rápidos e efeitos visuais modernos.</p>
-                </div>
-                <div class="click-hint">
-                    <i class="fas fa-hand-pointer"></i>
-                </div>
-            </div>
-            <div class="stack-card glass-card">
-                <video src="videos/O TAF DA CIA PREC É HARDCORE!-00.00.00.000-00.00.26.086.mp4" loop muted playsinline
-                    preload="metadata"></video>
-                <div class="card-content">
-                    <h3>Legião Estrangeira</h3>
-                    <p>Cortes rápidos e efeitos visuais modernos.</p>
-                </div>
-                <div class="click-hint">
-                    <i class="fas fa-hand-pointer"></i>
-                </div>
-            </div>
-            <div class="stack-card glass-card">
-                <video src="videos/GERR ou COMANF_ QUAL É A DIFERENÇA_ COMO ENTRAR_-00.00.00.000-00.01.01.375.mp4" loop
-                    muted playsinline preload="metadata"></video>
-                <div class="card-content">
-                    <h3>Legião Estrangeira</h3>
-                    <p>Cortes rápidos e efeitos visuais modernos.</p>
-                </div>
-                <div class="click-hint">
-                    <i class="fas fa-hand-pointer"></i>
-                </div>
-            </div>
-
-            <div class="stack-card glass-card">
-                <video
-                    src="videos/COMANDOS ANFÍBIOS OU OPERAÇÕES ESPECIAIS_ QUAL é a DIFERENÇA ENTRE OS DOIS CURSOS_-00.00.00.000-00.01.13.698.mp4"
-                    loop muted playsinline preload="metadata"></video>
-                <div class="card-content">
-                    <h3>Legião Estrangeira</h3>
-                    <p>Cortes rápidos e efeitos visuais modernos.</p>
-                </div>
-                <div class="click-hint">
-                    <i class="fas fa-hand-pointer"></i>
-                </div>
-            </div>
-        </section>
-
-        <div class="center-btn">
-            <a href="https://www.youtube.com/fuzileiroreal" target="_blank" class="btn-all">Canal Fuzileiro <i
-                    class="fab fa-youtube"></i></a>
-            <a href="https://www.youtube.com/@sopapirocast" target="_blank" class="btn-all">Canal Só Papiro <i
-                    class="fab fa-youtube"></i></a>
         </div>
 
-        <h2 class="section-title">Thumbnails</h2>
-        <section class="stack-container horizontal-stack">
-            <div class="stack-card glass-card">
-                <img src="tumb/maxresdefault (1).jpg" alt="Thumbnail 1">
-                <div class="card-content">
+        <div class="scroll-hint" aria-hidden="true">
+            <span>SCROLL</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
 
-                </div>
-                <div class="click-hint">
-                    <i class="fas fa-hand-pointer"></i>
-                </div>
-            </div>
-            <div class="stack-card glass-card">
-                <img src="tumb/maxresdefault (2).jpg" alt="Thumbnail 2">
-                <div class="card-content">
+    <!-- ============= MARQUEE ============= -->
+    <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+            <span>VIRAL CONTENT</span><i class="fas fa-circle dot"></i>
+            <span>VIDEO EDITING</span><i class="fas fa-circle dot"></i>
+            <span>MOTION DESIGN</span><i class="fas fa-circle dot"></i>
+            <span>BRAND STRATEGY</span><i class="fas fa-circle dot"></i>
+            <span>VIRAL CONTENT</span><i class="fas fa-circle dot"></i>
+            <span>VIDEO EDITING</span><i class="fas fa-circle dot"></i>
+            <span>MOTION DESIGN</span><i class="fas fa-circle dot"></i>
+            <span>BRAND STRATEGY</span><i class="fas fa-circle dot"></i>
+        </div>
+    </div>
 
-                </div>
-                <div class="click-hint">
-                    <i class="fas fa-hand-pointer"></i>
-                </div>
-            </div>
-            <div class="stack-card glass-card">
-                <img src="tumb/maxresdefault (3).jpg" alt="Thumbnail 3">
-                <div class="card-content">
-      
-                </div>
-                <div class="click-hint">
-                    <i class="fas fa-hand-pointer"></i>
-                </div>
-            </div>
+    <!-- ============= WORK SECTION ============= -->
+    <section id="work" class="section">
+        <div class="section-head reveal">
+            <span class="sec-label">// 01 — FEATURED WORK</span>
+            <h2 class="sec-title">Projetos em <span class="grad">Destaque</span></h2>
+            <p class="sec-desc">Edições com foco em retenção, branding e narrativa cinematográfica para canais militares e podcasts.</p>
+        </div>
 
-            <div class="stack-card glass-card">
-                <img src="tumb/maxresdefault (4).jpg" alt="Thumbnail 3">
-                <div class="card-content">
-
+        <div class="work-grid">
+            <article class="work-card reveal" data-tilt>
+                <div class="work-media">
+                    <video src="videos/OPERAÇÕES COM CÃES - TODOS OS TEMEM OS CÃES DE GUERRA!-00.00.00.000-00.01.23.215.mp4" loop muted playsinline preload="metadata"></video>
+                    <div class="work-glow"></div>
                 </div>
-                <div class="click-hint">
-                    <i class="fas fa-hand-pointer"></i>
-                </div>
-            </div>
-            <div class="stack-card glass-card">
-                <img src="tumb/maxresdefault (5).jpg" alt="Thumbnail 3">
-                <div class="card-content">
-  
-                </div>
-                <div class="click-hint">
-                    <i class="fas fa-hand-pointer"></i>
-                </div>
-            </div>
-            <div class="stack-card glass-card">
-                <img src="tumb/maxresdefault.jpg" alt="Thumbnail 3">
-                <div class="card-content">
-
-                </div>
-                <div class="click-hint">
-                    <i class="fas fa-hand-pointer"></i>
-                </div>
-            </div>
-
-            <div class="stack-card glass-card">
-                <img src="tumb/sddefault (3).jpg" Thumbnail 3">
-                <div class="card-content">
-
-                </div>
-                <div class="click-hint">
-                    <i class="fas fa-hand-pointer"></i>
-                </div>
-            </div>
-            <div class="stack-card glass-card">
-                <img src="tumb/sddefault (4).jpg" Thumbnail 3">
-                <div class="card-content">
-
-                </div>
-                <div class="click-hint">
-                    <i class="fas fa-hand-pointer"></i>
-                </div>
-            </div>
-
-            <div class="stack-card glass-card">
-                <img src="tumb/sddefault.jpg" Thumbnail 3">
-                <div class="card-content">
-                </div>
-                <div class="click-hint">
-                    <i class="fas fa-hand-pointer"></i>
-                </div>
-            </div>
-
-            <div class="stack-card glass-card">
-                <img src="tumb/3.jpg" Thumbnail 3">
-                <div class="card-content">
-      
-                </div>
-                <div class="click-hint">
-                    <i class="fas fa-hand-pointer"></i>
-                </div>
-            </div>
-
-            <div class="stack-card glass-card">
-                <img src="tumb/3 (2).jpg" Thumbnail 3">
-                <div class="card-content">
-
-                </div>
-                <div class="click-hint">
-                    <i class="fas fa-hand-pointer"></i>
-                </div>
-            </div>
-        </section>
-
-
-
-        <h2 class="section-title">Resultados & Clientes</h2>
-        <section class="results-grid">
-            <div class="client-card glass-card active" onclick="toggleClient(this, event)">
-                <div class="client-header">
-                    <div class="client-brand-img">
-                        <img src="logo/download.jpg" alt="Marca 1">
-                    </div>
-                    <div class="client-info">
-                        <h4>Fuzileiro Real</h4>
-                        <p>Entretenimento Militar</p>
-                    </div>
-                    <i class="fas fa-chevron-down toggle-icon"></i>
-                </div>
-                <div class="client-dropdown">
-                    <div class="stats-row">
-                        <a href="https://www.instagram.com/fuzileiroreal02/" target="_blank" class="stat-item"><i
-                                class="fab fa-instagram"></i> <span>Instagram: 250k+</span></a>
-                        <a href="https://www.youtube.com/fuzileiroreal" target="_blank" class="stat-item"><i
-                                class="fab fa-youtube"></i>
-                            <span>YouTube: 1.2M+</span></a>
+                <div class="work-meta">
+                    <span class="work-num">/01</span>
+                    <div>
+                        <h3>Operações com Cães</h3>
+                        <p>Edição dinâmica focada em retenção e branding.</p>
                     </div>
                 </div>
-            </div>
-            <div class="client-card glass-card" onclick="toggleClient(this, event)">
-                <div class="client-header">
-                    <div class="client-brand-img">
-                        <img src="logo/channels4_profile.jpg" alt="Marca 2">
-                    </div>
-                    <div class="client-info">
-                        <h4>Só Papiro Cast</h4>
-                        <p>Entretenimento Militar e Educativo</p>
-                    </div>
-                    <i class="fas fa-chevron-down toggle-icon"></i>
+            </article>
+
+            <article class="work-card reveal" data-tilt>
+                <div class="work-media">
+                    <video src="videos/brasileironaucrania.mp4" loop muted playsinline preload="metadata"></video>
+                    <div class="work-glow"></div>
                 </div>
-                <div class="client-dropdown">
-                    <div class="stats-row">
-                        <a href="https://www.instagram.com/sopapirocast/" target="_blank" class="stat-item"><i
-                                class="fab fa-instagram"></i> <span>Instagram: 85k</span></a>
-                        <a href="https://www.youtube.com/@sopapirocast" target="_blank" class="stat-item"><i
-                                class="fab fa-youtube"></i>
-                            <span>YouTube: 300k+</span></a>
+                <div class="work-meta">
+                    <span class="work-num">/02</span>
+                    <div>
+                        <h3>Brasileiros na Ucrânia</h3>
+                        <p>Color grading e narrativa cinematográfica.</p>
                     </div>
                 </div>
+            </article>
+
+            <article class="work-card reveal" data-tilt>
+                <div class="work-media">
+                    <video src="videos/COMANDOS ANFÍBIOS OU OPERAÇÕES ESPECIAIS_ QUAL é a DIFERENÇA ENTRE OS DOIS CURSOS_-00.00.00.000-00.01.13.698.mp4" loop muted playsinline preload="metadata"></video>
+                    <div class="work-glow"></div>
+                </div>
+                <div class="work-meta">
+                    <span class="work-num">/03</span>
+                    <div>
+                        <h3>TAF Comandos Anfíbios</h3>
+                        <p>Cortes rápidos e efeitos visuais modernos.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="work-card reveal" data-tilt>
+                <div class="work-media">
+                    <video src="videos/O LADO SOMBRIO DA LEGIÃO ESTRANGEIRA _ PASSO A PASSO PARA SE TORNAR UM LEGIONÁRIO!-00.00.00.000-00.01.09.160.mp4" loop muted playsinline preload="metadata"></video>
+                    <div class="work-glow"></div>
+                </div>
+                <div class="work-meta">
+                    <span class="work-num">/04</span>
+                    <div>
+                        <h3>Legião Estrangeira</h3>
+                        <p>Mini-documentário com storytelling envolvente.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="work-card reveal" data-tilt>
+                <div class="work-media">
+                    <video src="videos/CONHEÇA O BEPI - OS CAÇADORES DA CAATINGA!-00.00.00.000-00.01.26.278.mp4" loop muted playsinline preload="metadata"></video>
+                    <div class="work-glow"></div>
+                </div>
+                <div class="work-meta">
+                    <span class="work-num">/05</span>
+                    <div>
+                        <h3>BEPI — Caatinga</h3>
+                        <p>Edição imersiva com ritmo e atmosfera.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="work-card reveal" data-tilt>
+                <div class="work-media">
+                    <video src="videos/INSANO_ TAF dos PARACOMANDOS-00.00.00.000-00.01.13.423.mp4" loop muted playsinline preload="metadata"></video>
+                    <div class="work-glow"></div>
+                </div>
+                <div class="work-meta">
+                    <span class="work-num">/06</span>
+                    <div>
+                        <h3>TAF Paracomandos</h3>
+                        <p>Cortes sincronizados e impacto visual.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="work-card reveal" data-tilt>
+                <div class="work-media">
+                    <video src="videos/O TAF DA CIA PREC É HARDCORE!-00.00.00.000-00.00.26.086.mp4" loop muted playsinline preload="metadata"></video>
+                    <div class="work-glow"></div>
+                </div>
+                <div class="work-meta">
+                    <span class="work-num">/07</span>
+                    <div>
+                        <h3>TAF CIA PREC</h3>
+                        <p>Edição hardcore com energia e impacto.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="work-card reveal" data-tilt>
+                <div class="work-media">
+                    <video src="videos/GERR ou COMANF_ QUAL É A DIFERENÇA_ COMO ENTRAR_-00.00.00.000-00.01.01.375.mp4" loop muted playsinline preload="metadata"></video>
+                    <div class="work-glow"></div>
+                </div>
+                <div class="work-meta">
+                    <span class="work-num">/08</span>
+                    <div>
+                        <h3>GERR vs COMANF</h3>
+                        <p>Edição educativa com clareza e ritmo.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="work-card reveal" data-tilt>
+                <div class="work-media">
+                    <video src="videos/A HISTÓRIA do CB ANISIO - O NAVAL QUE FOI PARAR NA UCRÂNIA!-00.00.00.000-00.00.51.811.mp4" loop muted playsinline preload="metadata"></video>
+                    <div class="work-glow"></div>
+                </div>
+                <div class="work-meta">
+                    <span class="work-num">/09</span>
+                    <div>
+                        <h3>CB Anísio na Ucrânia</h3>
+                        <p>Storytelling documental e color grading.</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="channels-row reveal">
+            <a href="https://www.youtube.com/fuzileiroreal" target="_blank" rel="noopener" class="btn-channel">
+                <i class="fab fa-youtube"></i>
+                <span>Canal Fuzileiro Real</span>
+                <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a href="https://www.youtube.com/@sopapirocast" target="_blank" rel="noopener" class="btn-channel">
+                <i class="fab fa-youtube"></i>
+                <span>Canal Só Papiro Cast</span>
+                <i class="fas fa-external-link-alt"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- ============= THUMBNAILS ============= -->
+    <section id="thumbs" class="section">
+        <div class="section-head reveal">
+            <span class="sec-label">// 02 — VISUAL IDENTITY</span>
+            <h2 class="sec-title">Thumbnails <span class="grad">High-CTR</span></h2>
+            <p class="sec-desc">Capas que entregam clique, hierarquia visual e identidade. Designs feitos para parar o scroll.</p>
+        </div>
+
+        <div class="thumb-bento">
+            <div class="thumb-cell tall reveal"><img src="tumb/maxresdefault (1).jpg" alt="Thumbnail 1" loading="lazy"></div>
+            <div class="thumb-cell reveal"><img src="tumb/maxresdefault (2).jpg" alt="Thumbnail 2" loading="lazy"></div>
+            <div class="thumb-cell wide reveal"><img src="tumb/maxresdefault (3).jpg" alt="Thumbnail 3" loading="lazy"></div>
+            <div class="thumb-cell reveal"><img src="tumb/maxresdefault (4).jpg" alt="Thumbnail 4" loading="lazy"></div>
+            <div class="thumb-cell reveal"><img src="tumb/maxresdefault (5).jpg" alt="Thumbnail 5" loading="lazy"></div>
+            <div class="thumb-cell tall reveal"><img src="tumb/maxresdefault.jpg" alt="Thumbnail 6" loading="lazy"></div>
+            <div class="thumb-cell reveal"><img src="tumb/sddefault (3).jpg" alt="Thumbnail 7" loading="lazy"></div>
+            <div class="thumb-cell reveal"><img src="tumb/sddefault (4).jpg" alt="Thumbnail 8" loading="lazy"></div>
+            <div class="thumb-cell wide reveal"><img src="tumb/sddefault.jpg" alt="Thumbnail 9" loading="lazy"></div>
+            <div class="thumb-cell reveal"><img src="tumb/3.jpg" alt="Thumbnail 10" loading="lazy"></div>
+            <div class="thumb-cell reveal"><img src="tumb/3 (2).jpg" alt="Thumbnail 11" loading="lazy"></div>
+        </div>
+    </section>
+
+    <!-- ============= CLIENTS ============= -->
+    <section id="clients" class="section">
+        <div class="section-head reveal">
+            <span class="sec-label">// 03 — RESULTS</span>
+            <h2 class="sec-title">Resultados &amp; <span class="grad">Clientes</span></h2>
+            <p class="sec-desc">Parcerias que geraram alcance massivo, engajamento real e construção de comunidade.</p>
+        </div>
+
+        <div class="client-row">
+            <article class="client-card reveal">
+                <div class="client-logo">
+                    <img src="logo/download.jpg" alt="Fuzileiro Real">
+                </div>
+                <div class="client-body">
+                    <div class="client-title">
+                        <h3>Fuzileiro Real</h3>
+                        <span class="client-cat">Entretenimento Militar</span>
+                    </div>
+                    <div class="client-numbers">
+                        <a href="https://www.instagram.com/fuzileiroreal02/" target="_blank" rel="noopener" class="num-pill insta">
+                            <i class="fab fa-instagram"></i>
+                            <span><b>250k+</b> Instagram</span>
+                        </a>
+                        <a href="https://www.youtube.com/fuzileiroreal" target="_blank" rel="noopener" class="num-pill yt">
+                            <i class="fab fa-youtube"></i>
+                            <span><b>1.2M+</b> YouTube</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="client-card reveal">
+                <div class="client-logo">
+                    <img src="logo/channels4_profile.jpg" alt="Só Papiro Cast">
+                </div>
+                <div class="client-body">
+                    <div class="client-title">
+                        <h3>Só Papiro Cast</h3>
+                        <span class="client-cat">Entretenimento Militar &amp; Educativo</span>
+                    </div>
+                    <div class="client-numbers">
+                        <a href="https://www.instagram.com/sopapirocast/" target="_blank" rel="noopener" class="num-pill insta">
+                            <i class="fab fa-instagram"></i>
+                            <span><b>85k</b> Instagram</span>
+                        </a>
+                        <a href="https://www.youtube.com/@sopapirocast" target="_blank" rel="noopener" class="num-pill yt">
+                            <i class="fab fa-youtube"></i>
+                            <span><b>300k+</b> YouTube</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- ============= SKILLS ============= -->
+    <section id="skills" class="section">
+        <div class="section-head reveal">
+            <span class="sec-label">// 04 — STACK</span>
+            <h2 class="sec-title">Ferramentas &amp; <span class="grad">Skills</span></h2>
+            <p class="sec-desc">Stack completo para todo fluxo: pré-produção, edição, motion, design e finalização.</p>
+        </div>
+
+        <div class="skills-grid">
+            <div class="skill-bar reveal" data-level="100"><span class="skill-name">Photoshop</span><div class="skill-track"><div class="skill-fill"></div></div><span class="skill-pct">100%</span></div>
+            <div class="skill-bar reveal" data-level="80"><span class="skill-name">CapCut</span><div class="skill-track"><div class="skill-fill"></div></div><span class="skill-pct">80%</span></div>
+            <div class="skill-bar reveal" data-level="100"><span class="skill-name">Premiere Pro</span><div class="skill-track"><div class="skill-fill"></div></div><span class="skill-pct">100%</span></div>
+            <div class="skill-bar reveal" data-level="80"><span class="skill-name">After Effects</span><div class="skill-track"><div class="skill-fill"></div></div><span class="skill-pct">80%</span></div>
+            <div class="skill-bar reveal" data-level="60"><span class="skill-name">Blender</span><div class="skill-track"><div class="skill-fill"></div></div><span class="skill-pct">60%</span></div>
+            <div class="skill-bar reveal" data-level="100"><span class="skill-name">Canva</span><div class="skill-track"><div class="skill-fill"></div></div><span class="skill-pct">100%</span></div>
+            <div class="skill-bar reveal" data-level="80"><span class="skill-name">InDesign</span><div class="skill-track"><div class="skill-fill"></div></div><span class="skill-pct">80%</span></div>
+        </div>
+    </section>
+
+    <!-- ============= NICHES ============= -->
+    <section id="niches" class="section">
+        <div class="section-head reveal">
+            <span class="sec-label">// 05 — EXPERIENCE</span>
+            <h2 class="sec-title">Experiências &amp; <span class="grad">Nichos</span></h2>
+            <p class="sec-desc">Áreas onde domino linguagem, código visual e expectativas da audiência.</p>
+        </div>
+
+        <div class="niche-cloud">
+            <div class="niche-chip reveal"><i class="fas fa-fighter-jet"></i><span>Entretenimento Militar</span></div>
+            <div class="niche-chip reveal"><i class="fas fa-graduation-cap"></i><span>Entretenimento Educativo</span></div>
+            <div class="niche-chip reveal"><i class="fas fa-microphone-alt"></i><span>Podcasts</span></div>
+            <div class="niche-chip reveal"><i class="fas fa-laptop-code"></i><span>Mídia para Cursos</span></div>
+            <div class="niche-chip reveal"><i class="fas fa-video"></i><span>Filmmaker</span></div>
+        </div>
+    </section>
+
+    <!-- ============= MINDSET / SOFT SKILLS ============= -->
+    <section id="mind" class="section">
+        <div class="section-head reveal">
+            <span class="sec-label">// 06 — MINDSET</span>
+            <h2 class="sec-title">Habilidades &amp; <span class="grad">Diferenciais</span></h2>
+            <p class="sec-desc">O que faz a diferença além da técnica: comunicação, ritmo de entrega e versatilidade.</p>
+        </div>
+
+        <div class="mind-grid">
+            <div class="mind-card reveal" data-tilt>
+                <div class="mind-icon"><i class="fas fa-comments"></i></div>
+                <h3>Comunicativo</h3>
+                <p>Foco em entendimento claro e alinhamento constante com o cliente.</p>
+                <span class="mind-num">01</span>
+            </div>
+            <div class="mind-card reveal" data-tilt>
+                <div class="mind-icon"><i class="fas fa-users"></i></div>
+                <h3>Trabalho em Equipe</h3>
+                <p>Fácil integração com times de marketing e departamentos criativos.</p>
+                <span class="mind-num">02</span>
+            </div>
+            <div class="mind-card reveal" data-tilt>
+                <div class="mind-icon"><i class="fas fa-layer-group"></i></div>
+                <h3>Postagens em Massa</h3>
+                <p>Especialista em fluxo de trabalho para alto volume de conteúdo.</p>
+                <span class="mind-num">03</span>
+            </div>
+            <div class="mind-card reveal" data-tilt>
+                <div class="mind-icon"><i class="fas fa-robot"></i></div>
+                <h3>IA para Automação</h3>
+                <p>Uso de ferramentas avançadas para acelerar produção sem perder qualidade.</p>
+                <span class="mind-num">04</span>
+            </div>
+            <div class="mind-card highlight reveal" data-tilt>
+                <div class="mind-icon"><i class="fas fa-microchip"></i></div>
+                <h3>Versatilidade Técnica</h3>
+                <p>Capacidade única de entrega em qualquer setup — PC forte ou fraco.</p>
+                <span class="mind-num">05</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============= FOOTER / CONTACT ============= -->
+    <footer id="contact" class="footer">
+        <div class="footer-inner">
+            <div class="footer-cta reveal">
+                <span class="sec-label">// 07 — LET'S CONNECT</span>
+                <h2 class="footer-title">
+                    Vamos criar algo<br>
+                    <span class="grad">que viraliza?</span>
+                </h2>
+                <p class="footer-phrase">"Criatividade, retenção e resultados que transformam."</p>
+
+                <div class="footer-contacts">
+                    <a href="tel:+5521973042881" class="contact-pill">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>
+                            <small>Telefone</small>
+                            <b>+55 (21) 97304-2881</b>
+                        </span>
+                    </a>
+                    <a href="mailto:mateusalves.flu@gmail.com" class="contact-pill">
+                        <i class="fas fa-envelope"></i>
+                        <span>
+                            <small>Email</small>
+                            <b>mateusalves.flu@gmail.com</b>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="footer-socials">
+                    <a href="https://api.whatsapp.com/send?phone=5521973042881&text=Ol%C3%A1%2C+Mateus%21" target="_blank" rel="noopener" class="sc-btn lg"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/mateusalvesdzn" target="_blank" rel="noopener" class="sc-btn lg"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="sc-btn lg"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:mateusalves.flu@gmail.com" class="sc-btn lg"><i class="fas fa-envelope"></i></a>
+                </div>
             </div>
 
-
-
-        </section>
-
-        <h2 class="section-title">Ferramentas & Skills</h2>
-        <section class="skills-list">
-            <div class="glass-card skill-row">
-                <div class="skill-main">
-                    <span>Photoshop</span>
-                </div>
-                <div class="stars">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                        class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
-            </div>
-            <div class="glass-card skill-row">
-                <div class="skill-main">
-                    <span>CapCut</span>
-                </div>
-                <div class="stars">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                        class="fas fa-star"></i><i class="far fa-star"></i>
-                </div>
-            </div>
-            <div class="glass-card skill-row">
-                <div class="skill-main">
-                    <span>Premiere Pro</span>
-                </div>
-                <div class="stars">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                        class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
-            </div>
-            <div class="glass-card skill-row">
-                <div class="skill-main">
-                    <span>After Effects</span>
-                </div>
-                <div class="stars">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                        class="fas fa-star"></i><i class="far fa-star"></i>
-                </div>
-            </div>
-            <div class="glass-card skill-row">
-                <div class="skill-main">
-                    <span>Blender</span>
-                </div>
-                <div class="stars">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                        class="far fa-star"></i><i class="far fa-star"></i>
-                </div>
-            </div>
-            <div class="glass-card skill-row">
-                <div class="skill-main">
-                    <span>Canva</span>
-                </div>
-                <div class="stars">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                        class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
-            </div>
-            <div class="glass-card skill-row">
-                <div class="skill-main">
-                    <span>InDesign</span>
-                </div>
-                <div class="stars">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                        class="fas fa-star"></i><i class="far fa-star"></i>
-                </div>
-            </div>
-        </section>
-
-        <h2 class="section-title">Experiências & Nichos</h2>
-        <section class="experience-tags">
-            <div class="exp-tag">
-                <i class="fas fa-fighter-jet"></i>
-                <span>Entretenimento Militar</span>
-            </div>
-            <div class="exp-tag">
-                <i class="fas fa-graduation-cap"></i>
-                <span>Entretenimento Educativo</span>
-            </div>
-            <div class="exp-tag">
-                <i class="fas fa-microphone-alt"></i>
-                <span>Podcasts</span>
-            </div>
-            <div class="exp-tag">
-                <i class="fas fa-laptop-code"></i>
-                <span>Mídia para Cursos</span>
-            </div>
-            <div class="exp-tag">
-                <i class="fas fa-video"></i>
-                <span>Filmmaker</span>
-            </div>
-        </section>
-
-        <h2 class="section-title">Habilidades & Diferenciais</h2>
-        <section class="soft-skills-grid">
-            <div class="glass-card soft-skill-card">
-                <i class="fas fa-comments"></i>
-                <div>
-                    <h3>Comunicativo</h3>
-                    <p>Foco em entendimento claro e alinhamento constante com o cliente.</p>
-                </div>
-            </div>
-            <div class="glass-card soft-skill-card">
-                <i class="fas fa-users"></i>
-                <div>
-                    <h3>Trabalho em Equipe</h3>
-                    <p>Fácil integração com times de marketing e departamentos criativos.</p>
-                </div>
-            </div>
-            <div class="glass-card soft-skill-card">
-                <i class="fas fa-layer-group"></i>
-                <div>
-                    <h3>Postagens em Massa</h3>
-                    <p>Especialista em fluxo de trabalho para alto volume de conteúdo.</p>
-                </div>
-            </div>
-            <div class="glass-card soft-skill-card">
-                <i class="fas fa-robot"></i>
-                <div>
-                    <h3>IA para Automação</h3>
-                    <p>Uso de ferramentas avançadas para acelerar a produção sem perder qualidade.</p>
-                </div>
-            </div>
-            <div class="glass-card soft-skill-card highlight-skill">
-                <i class="fas fa-microchip"></i>
-                <div>
-                    <h3>Versatilidade Técnica</h3>
-                    <p>Capacidade única de entrega em qualquer setup (PC forte ou fraco).</p>
-                </div>
-            </div>
-        </section>
-
-        <footer class="glass-card footer-section">
-            <div class="footer-content">
+            <div class="footer-mark reveal">
+                <div class="footer-big">M/A</div>
                 <div class="footer-info">
-                    <h2>Mateus Alves</h2>
-                    <p>Idade: 26 anos</p>
-                    <p class="footer-phrase">"Criatividade, retenção e resultados que transformam."</p>
-                    <div class="footer-contact">
-                        <p><i class="fas fa-phone-alt"></i> +55 (21) 97304-2881</p>
-                        <p><i class="fas fa-envelope"></i> mateusalves.flu@gmail.com</p>
-                    </div>
-                </div>
-                <div class="footer-socials horizontal-socials">
-                    <a href="https://api.whatsapp.com/send?phone=5521973042881&text=Ol%C3%A1%2C+Mateus%21"
-                        class="social-btn whatsapp" title="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://www.instagram.com/mateusalvesdzn" class="social-btn insta" title="Instagram"
-                        target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-btn linkedin" title="LinkedIn" target="_blank"><i
-                            class="fab fa-linkedin"></i></a>
-                    <a href="mailto:mateusalves.flu@gmail.com" class="social-btn email" title="Email" target="_blank"><i
-                            class="fas fa-envelope"></i></a>
+                    <p><b>Mateus Alves</b> — 26 anos</p>
+                    <p>Rio de Janeiro / Brasil</p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Mateus Silveira. Todos os direitos reservados.</p>
-            </div>
-        </footer>
-    </main>
+        </div>
+        <div class="footer-bar">
+            <span>© 2026 Mateus Alves — Todos os direitos reservados.</span>
+            <span class="bar-right">DESIGNED &amp; CODED WITH <i class="fas fa-heart"></i></span>
+        </div>
+    </footer>
 
+    <!-- ============= SCRIPTS ============= -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="script.js"></script>
 </body>
 
