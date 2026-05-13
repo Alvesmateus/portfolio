@@ -15,7 +15,7 @@ export const portfolioData: PortfolioData = {
     whatsappHref:
       "https://api.whatsapp.com/send?phone=5521973042881&text=Ol%C3%A1%2C+Mateus%21",
     instagramHref: "https://www.instagram.com/mateusalvesdzn",
-    linkedInHref: "#",
+    linkedInHref: "https://www.linkedin.com/in/mateusalvesdits/",
     socials: [
       {
         label: "WhatsApp",
@@ -27,7 +27,7 @@ export const portfolioData: PortfolioData = {
       },
       {
         label: "LinkedIn",
-        href: "#",
+        href: "https://www.linkedin.com/in/mateusalvesdits/",
       },
       {
         label: "Email",
